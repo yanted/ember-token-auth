@@ -1,0 +1,9 @@
+{{#if loggedIn}}
+  Du bist eingeloggt! Lese einige {{#link-to 'posts'}}Beiträge{{/link-to}}.
+{{else}}
+  <form method="post" {{action "login" on="submit"}}>
+    {{input value=username type="text"}}
+    {{input value=password type="password"}}
+    {{input value="Login" type="submit"}}
+  </form>
+{{/if}}

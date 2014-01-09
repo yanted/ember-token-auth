@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Test app</title>
+  </head>
+
+  <body>
+    <h1>{{#link-to 'index'}}Willkommen{{/link-to}}</h1>
+
+    {{#if loggedIn}}
+      <p>
+        <a href="#" {{action "logout"}}>Logout</a>
+      </p>
+    {{/if}}
+
+    {{outlet}}
+  </body>
+</html>
