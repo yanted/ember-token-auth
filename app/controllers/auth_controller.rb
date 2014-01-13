@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def create
-    # Beispiel-Nutzer, keine Prüfung der Zugangsdaten
+    # Example user, no actual authentication
     user = auth_params.merge(id: 1)
 
     render json: { token: JWT.encode(user, 'secret') }

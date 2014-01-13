@@ -51,7 +51,7 @@ App.IndexController = Ember.Controller.extend({
         localStorage.jwt = data.token;
         this.get('controllers.application').set('loggedIn', true);
       }.bind(this), function() {
-        alert('Login fehlgeschlagen');
+        alert('Login failed');
       });
     }
   }

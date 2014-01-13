@@ -1,5 +1,5 @@
 {{#if loggedIn}}
-  Du bist eingeloggt! Lese einige {{#link-to 'posts'}}Beiträge{{/link-to}}.
+  You are logged in! Read a few {{#link-to 'posts'}}posts{{/link-to}}.
 {{else}}
   <form method="post" {{action "login" on="submit"}}>
     {{input value=username type="text"}}
