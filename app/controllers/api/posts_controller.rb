@@ -15,9 +15,8 @@ class Api::PostsController < ApplicationController
   def validate_token
     begin
       token = request.headers['Authorization'].split(' ').last
-      logger.debug token
       JWT.decode(token, 'secret')
-    rescue
+    rescue JWT::DecodeError
       render nothing: true, status: :unauthorized
     end
   end
